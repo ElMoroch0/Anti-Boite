@@ -103,7 +103,7 @@ const PHASE_REGEX = /^phase([123])_(.+)Action$/i;
 const rootGroup = new THREE.Group();
 scene.add(rootGroup);
 
-new GLTFLoader().load("./public/AntiRevueScene18.glb", (gltf) => {
+new GLTFLoader().load("/AntiRevueScene18.glb", (gltf) => {
     const root = gltf.scene;
     root.rotation.y = Math.PI / 2;
     root.scale.set(0.1, 0.1, 0.1);
@@ -410,3 +410,4 @@ window.addEventListener("resize", () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
