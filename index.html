@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planet Edition : Anti</title>
+
+  <!-- Lien vers le CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Import map pour Three.js et ses modules -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.131/build/three.module.js",
+        "jsm/": "https://cdn.jsdelivr.net/npm/three@0.131/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Menu plein écran au chargement -->
+  <div id="menuFullscreen">
+    <button id="startButton">Click pour découvrir</button>
+  </div>
+
+  <!-- Wrapper général (utile si tu veux ajouter UI supplémentaires plus tard) -->
+  <div id="uiRoot">
+    <!-- Container pour les textes Phase4 (initialement caché via CSS) -->
+    <div id="phase4Wrapper" aria-hidden="true">
+      <button id="buttonX" aria-label="Fermer">✕</button>
+      <div id="phase4TextContainer" role="region" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <!-- Script principal -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
